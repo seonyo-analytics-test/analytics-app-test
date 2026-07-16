@@ -2,6 +2,7 @@
   "name": "analytics-app-test",
   "main": "expo-router/entry",
   "version": "1.0.0",
+  "packageManager": "pnpm@10.11.0",
   "dependencies": {
     "@expo/ui": "~57.0.4",
     "expo": "~57.0.4",
