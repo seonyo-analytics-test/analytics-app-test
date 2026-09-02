@@ -5,11 +5,15 @@ import { Stack } from 'expo-router';
 import { useEffect } from 'react';
 
 import { AnalyticsProvider } from '@/providers/posthog-provider';
+import {initializeAmplitude} from "@/lib/amplitude";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   useEffect(() => {
+      void initializeAmplitude().catch((error) => {
+          console.error('Failed to initialize Amplitude', error);
+      })
     SplashScreen.hideAsync();
   }, []);
 
@@ -21,6 +25,7 @@ export default function RootLayout() {
         }}>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="posthog" options={{ title: 'PostHog' }} />
+        <Stack.Screen name="amplitude" options={{ title: 'Amplitude' }} />
       </Stack>
     </AnalyticsProvider>
   );

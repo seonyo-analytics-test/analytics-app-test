@@ -4,8 +4,11 @@ import { Pressable, ScrollView, Text, View } from 'react-native';
 const ANALYTICS_OPTIONS = [
   {
     title: 'PostHog',
-    description: 'capture, identify, flush 이벤트 테스트',
     href: '/posthog',
+  },
+  {
+    title: 'Amplitude',
+    href: '/amplitude',
   },
 ] as const;
 
@@ -28,7 +31,6 @@ export default function AnalyticsListScreen() {
                 className="min-h-20 w-full flex-row items-center justify-center gap-4 rounded-lg border border-gray-200 bg-white p-4 active:border-indigo-200 active:bg-gray-50">
                 <View className="flex-1 gap-1">
                   <Text className="text-lg font-bold text-gray-900">{option.title}</Text>
-                  <Text className="text-sm text-gray-500">{option.description}</Text>
                 </View>
                 <Text className="text-[28px] font-light text-indigo-600">›</Text>
               </Pressable>
