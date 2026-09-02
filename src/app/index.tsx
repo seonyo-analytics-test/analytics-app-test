@@ -10,6 +10,10 @@ const ANALYTICS_OPTIONS = [
     title: 'Amplitude',
     href: '/amplitude',
   },
+  {
+    title: 'Mixpanel',
+    href: '/mixpanel',
+  },
 ] as const;
 
 export default function AnalyticsListScreen() {
