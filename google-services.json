@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "891326414563",
+    "project_id": "analytics-test-6161a",
+    "storage_bucket": "analytics-test-6161a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891326414563:android:d6b94a30c65d432bfc8fd6",
+        "android_client_info": {
+          "package_name": "com.youngging2.analyticsapptest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjwzm26m7KtXGuVuPz1TailOpcXJo1ceA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

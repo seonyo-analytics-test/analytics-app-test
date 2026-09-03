@@ -7,11 +7,13 @@
     "scheme": "analyticsapptest",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "bundleIdentifier": "com.youngging2.analyticsapptest"
+      "bundleIdentifier": "com.youngging2.analyticsapptest",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "predictiveBackGestureEnabled": false,
-      "package": "com.youngging2.analyticsapptest"
+      "package": "com.youngging2.analyticsapptest",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "output": "static",
@@ -28,7 +30,24 @@
           }
         }
       ],
-      "expo-localization"
+      "expo-localization",
+      "@react-native-firebase/app",
+      [
+        "@react-native-firebase/analytics",
+        {
+          "ios": {
+            "withoutAdIdSupport": true
+          }
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "dynamic"
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,

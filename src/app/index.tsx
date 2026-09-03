@@ -14,6 +14,10 @@ const ANALYTICS_OPTIONS = [
     title: 'Mixpanel',
     href: '/mixpanel',
   },
+  {
+    title: 'Firebase Analytics / GA4',
+    href: '/firebase',
+  }
 ] as const;
 
 export default function AnalyticsListScreen() {

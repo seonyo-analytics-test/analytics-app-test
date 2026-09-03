@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { AnalyticsProvider } from '@/providers/posthog-provider';
 import {initializeAmplitude} from "@/lib/amplitude";
 import {initializeMixpanel} from "@/lib/mixpanel";
+import {initializeFirebaseAnalytics} from "@/lib/firebase-analytics";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -17,6 +18,12 @@ export default function RootLayout() {
       })
       void initializeMixpanel().catch((error) => {
           console.error('Failed to initialize Mixpanel', error);
+      });
+      void initializeFirebaseAnalytics().catch((error) => {
+          console.error(
+              'Failed to configure Firebase Analytics',
+              error,
+          );
       });
       SplashScreen.hideAsync();
   }, []);
@@ -31,6 +38,10 @@ export default function RootLayout() {
         <Stack.Screen name="posthog" options={{ title: 'PostHog' }} />
         <Stack.Screen name="amplitude" options={{ title: 'Amplitude' }} />
         <Stack.Screen name="mixpanel" options={{ title: 'Mixpanel' }} />
+        <Stack.Screen
+          name="firebase"
+          options={{ title: 'Firebase Analytics / GA4' }}
+        />
       </Stack>
     </AnalyticsProvider>
   );
